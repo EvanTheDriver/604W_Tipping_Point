@@ -1,6 +1,8 @@
 #include "main.h"
 #include "functions.hpp"
 using namespace pros;
+
+// josh comments
 Controller master(E_CONTROLLER_MASTER);
 //Imu inertial_sensor(15);-
  Motor leftFrontMotor(4);
@@ -151,7 +153,7 @@ inertial_sensor.tare_pitch();
 
 }
   /*
-  
+
 
 
 
