@@ -78,16 +78,14 @@ inertial_sensor.tare_pitch();
 //set a if loop to do match auto or coding skills here.
 //do like if 1 then match and 0 then Code
 //use disable
-/*   lcd::print (2,"%f",ArmMotorLeft.get_position());
-   lcd::print (2,"%f",ArmMotorRight.get_position());
-   pros::lcd::print(1,"inertial rotation =: [%0.0f]", inertial_sensor.get_rotation());
-   pros::lcd::print(1,"pitchvalue: [%0.0f]", inertial_sensor.get_pitch());
+  pros::lcd::print(1,"Heading: [%0.0f]", inertial_sensor.get_heading());
    Frontclaw.set_value(1);
+   delay(500);
    moveforward(2720, 0.2);
    delay(1000);
-   ImuTurnright(40, 2.85);
+   ImuTurnHeadingRight(40, 2.85, 20);
    delay(500);
-   moveforward(1420, 0.7);
+   moveforward(1405, 0.5);
    delay(1000);
    Frontclaw.set_value(0);
    delay(500);
@@ -97,15 +95,15 @@ inertial_sensor.tare_pitch();
    delay(1000);
    ImuTurnleft(-31, 4.5);
    delay(1000);
-   moveforward(720, 0.70);
+   moveforward(510, 0.7);
    delay(500);
-   ImuTurnright(16, 5.5);
+    ImuTurnHeadingRight(15, 5.5, 33);
    delay(1000);
    liftDown(1150, 127);
    delay(500);
    Frontclaw.set_value(1);
    delay(500);
-   moveback(-1025,1);
+   moveback(-800,1.4);
    delay(500);
    ImuTurnleft(-76, 2.8);
    liftDown(0, 127);
@@ -114,8 +112,10 @@ inertial_sensor.tare_pitch();
    delay(500);
    Frontclaw.set_value(0);
    delay(500);
-   ImuTurnright(12, 8.5);
-   delay(1000);
+   ImuTurnHeadingRight(10, 8.5, 300);
+   moveback(-69, 6);
+   ImuTurnleft(-10, 3);
+  /* delay(1000);
    BackArm.move_absolute(2960, 150);
    delay(500);
    moveback(-8000, 0.69);
@@ -149,7 +149,7 @@ inertial_sensor.tare_pitch();
     //ImuTurnHeadingRight (90, 1.2, 90);
     //example above
     //match auto
-    Frontclaw.set_value(1);
+  /*  Frontclaw.set_value(1);
     delay(250);
     moveforward(2750,0.8);
     delay(500);
@@ -174,7 +174,7 @@ inertial_sensor.tare_pitch();
     conveyerOff();
     BackArm.move_absolute(2420, 150);
     delay(1000);
-    moveback(-1000,3);
+    moveback(-1000,3);*/
 }
   /*
 
@@ -219,10 +219,9 @@ int cState=0;
 		rightFrontMotor = -rightY + leftX;
 		leftBackMotor = rightY + leftX;
 		rightBackMotor = -rightY + leftX;*/
-		lcd::print (2,"%f",ArmMotorLeft.get_position());
-    lcd::print (2,"%f",ArmMotorRight.get_position());
-    pros::lcd::print(1,"gyrovalue: [%0.0f]", inertial_sensor.get_rotation());
-    pros::lcd::print(1,"pitchvalue: [%0.0f]", inertial_sensor.get_pitch());
+
+    pros::lcd::print(1,"Heading: [%0.0f]", inertial_sensor.get_heading());
+
     /*lcd::print (4, "%f", leftBackDrive.get_position());
 		lcd::print (5,"%f", rightBackDrive.get_position());*/
 

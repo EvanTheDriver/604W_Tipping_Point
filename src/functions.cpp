@@ -17,7 +17,7 @@
 
 }*/
 
-/*void ImuTurnright(double degree, double kp){
+void ImuTurnright(double degree, double kp){
   double power;
   double error;
   //while the robot's rotation does not meet the target
@@ -40,7 +40,6 @@
   rightFrontMotor=0;
   rightBackMotor=0;
 }
-*/
 void ImuTurnleft(double degree, double kp){
   double power;
   double error;
