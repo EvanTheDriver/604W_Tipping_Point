@@ -1,8 +1,6 @@
 #include "main.h"
 #include "functions.hpp"
 using namespace pros;
-
-// josh comments
 Controller master(E_CONTROLLER_MASTER);
 //Imu inertial_sensor(15);-
  Motor leftFrontMotor(4);
@@ -141,7 +139,7 @@ inertial_sensor.tare_pitch();
     delay(500);
     moveforward(1420, 0.9);
     delay(500);
-    Frontclaw.set_value(0);```````````
+    Frontclaw.set_value(0);
     delay(250);
     moveback(-1420, 0.7);
     delay(250);
@@ -150,7 +148,33 @@ inertial_sensor.tare_pitch();
     moveback(-2720, 0.2);*/
     //ImuTurnHeadingRight (90, 1.2, 90);
     //example above
-
+    //match auto
+    Frontclaw.set_value(1);
+    delay(250);
+    moveforward(2750,0.8);
+    delay(500);
+    Frontclaw.set_value(0);
+    delay(500);
+    liftUp(1200, 127);
+    moveback(-2000,2);
+    delay(1000);
+    moveback(500,2.4);
+    delay(500);
+    liftUp(600,127);
+    delay(1000);
+    ImuTurnleft(-85,4.5);
+    delay(750);
+    moveforward(150,2.6);
+    BackArm.move_absolute(2960, 150);
+    delay(3000);
+    moveback(-1500,1.2);
+    delay(500);
+    conveyerOn();
+    delay(1000);
+    conveyerOff();
+    BackArm.move_absolute(2420, 150);
+    delay(1000);
+    moveback(-1000,3);
 }
   /*
 
