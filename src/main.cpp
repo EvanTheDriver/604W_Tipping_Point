@@ -78,7 +78,7 @@ inertial_sensor.tare_pitch();
 //set a if loop to do match auto or coding skills here.
 //do like if 1 then match and 0 then Code
 //use disable
-  pros::lcd::print(1,"Heading: [%0.0f]", inertial_sensor.get_heading());
+/*  pros::lcd::print(1,"Heading: [%0.0f]", inertial_sensor.get_heading());
    Frontclaw.set_value(1);
    delay(500);
    moveforward(2720, 0.2);
@@ -114,8 +114,8 @@ inertial_sensor.tare_pitch();
    delay(500);
    ImuTurnHeadingRight(10, 8.5, 300);
    moveback(-69, 6);
-   ImuTurnleft(-10, 3);
-  /* delay(1000);
+   ImuTurnleft(-20, 3);
+   delay(1000);
    BackArm.move_absolute(2960, 150);
    delay(500);
    moveback(-8000, 0.69);
@@ -135,7 +135,7 @@ inertial_sensor.tare_pitch();
    Frontclaw.set_value(1);
     moveforward(2720, 0.2);
     delay(250);
-    ImuTurnright(40, 2.85);
+    //ImuTurnright(40, 2.85);
     delay(500);
     moveforward(1420, 0.9);
     delay(500);
@@ -149,7 +149,7 @@ inertial_sensor.tare_pitch();
     //ImuTurnHeadingRight (90, 1.2, 90);
     //example above
     //match auto
-  /*  Frontclaw.set_value(1);
+    Frontclaw.set_value(1);
     delay(250);
     moveforward(2750,0.8);
     delay(500);
