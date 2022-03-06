@@ -133,11 +133,11 @@ void liftDown(double degree, double speed) {
 //void armDown() {
   //BackArm.move_absolute(2420, 150);
 //}
-void conveyerOn() {
-  Conveyor = 127;
+void conveyerOn(double power) {
+  Conveyor = power;
 }
-void conveyerOff() {
-  Conveyor = 0;
+void conveyerOff(double power) {
+  Conveyor = power;
 }
 /*void balance(double kp){
   //22 degree

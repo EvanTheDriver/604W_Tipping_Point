@@ -92,7 +92,7 @@ inertial_sensor.tare_pitch();
    moveforward(2663, 1.2);
    delay(500);
    liftUp(1600, 127);
-   delay(2000);
+   delay(2500);
    ImuTurnleft(-31, 5);
    delay(1000);
    moveforward(510, 0.7);
@@ -103,40 +103,52 @@ inertial_sensor.tare_pitch();
    delay(500);
    Frontclaw.set_value(1);
    delay(500);
-   moveback(-805,1.4);
+   moveback(-1200,1.4);
+
    delay(500);
-   ImuTurnleft(-80, 2.8);
+   ImuTurnleft(-70, 2.8);
    liftDown(0, 127);
    delay(1000);
    moveforward(1800, 1);
    delay(500);
    Frontclaw.set_value(0);
    delay(500);
-   BackArm.move_absolute(2960, 150);
-   delay(500);
-   moveback(-8000, 0.69);
+   moveback(-1000, 1.4);
+   delay(1000);
+   ImuTurnright(7, 5);
+BackArm.move_absolute(2980, 150);
+   delay(2500);
+   moveback(-6900, 0.69);
    delay(500);
    moveforward(800,0.5);
    delay(500);
-   ImuTurnleft(-50, 3.5);
+   liftUp(200, 127);
+   delay(500);
+   ImuTurnleft(-30, 3.4);
    delay(500);
    liftUp(1600, 127);
    delay(1000);
-   ImuTurnleft(20, 5);
+   moveforward(1000, 1.9);
    delay(500);
-   moveforward(1700, 3);
+   ImuTurnleft(-90, 1.3);
+   delay(500);
+   moveforward(600, 3.2);
    delay(500);
    liftDown(1150, 127);
    delay(500);
    Frontclaw.set_value(1);
    delay(500);
-   moveback(-800, 1.2);
+   moveback(-730, 1.2);
    delay(500);
-   ImuTurnHeadingRight(50,3.5,230);
+   ImuTurnHeadingRight(70,2.8,250);
    delay(500);
-   moveback(-4000,0.89);
-   ImuTurnleft(-50, 4);
-   moveback(-2007, 1.7);
+   moveback(-1050,1.7);
+   delay(1000);
+   BackArm.move_absolute(2550,150);
+   delay(1000);
+   ImuTurnleft(-70, 3.5);
+   delay(1000);
+   moveback(800, 3.5);
 
 //weird auto part
   /*  moveforward(2720, 0.2);
@@ -157,30 +169,27 @@ inertial_sensor.tare_pitch();
     //match auto
   /*  Frontclaw.set_value(1);
     delay(250);
-    moveforward(2750,0.8);
-    delay(500);
+    moveforward(2825,0.8);
+    delay(300);
     Frontclaw.set_value(0);
     delay(500);
-    liftUp(1200, 127);
-    moveback(-2000,2);
+    liftUp(300, 127);
+    moveback(-1543,2);
     delay(1000);
-    moveback(500,2.4);
-    delay(500);
-    liftUp(600,127);
-    delay(1000);
-    ImuTurnleft(-85,4.5);
+    ImuTurnleft(-60,3.5);
     delay(750);
-    moveforward(150,2.6);
     BackArm.move_absolute(2960, 150);
-    delay(3000);
-    moveback(-1500,1.2);
+    delay(2500);
+    moveback(-1000,1.2);
     delay(500);
-    conveyerOn();
-    delay(1000);
-    conveyerOff();
     BackArm.move_absolute(2420, 150);
-    delay(1000);
-    moveback(-1000,3);*/
+    delay(500);
+    moveforward(500, 2.2);
+    delay(500);
+    conveyerOn(127);
+    delay(2500);
+    conveyerOff(0);
+    liftUp(20,127);*/
 }
   /*
 
@@ -295,6 +304,6 @@ ArmMotorLeft = -master.get_analog(ANALOG_RIGHT_Y);
 		pros::delay(20);
     if(master.get_digital(DIGITAL_DOWN) == 1){
       void autonomous();
+      }
     }
   }
-}

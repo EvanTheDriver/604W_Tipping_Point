@@ -12,8 +12,8 @@ void clawUp();
 void clawDown();
 void armUp();
 void armDown();
-void conveyerOn();
-void conveyerOff();
+void conveyerOn(double power);
+void conveyerOff(double power);
 //void matchAuto();
 //void balance(double kp);
 #endif
